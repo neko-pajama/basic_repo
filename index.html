@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="JQuery Basics" />
+		<title>Ninja to Cat</title>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"   integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="   crossorigin="anonymous"></script>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="style.css">
+		<script type="text/javascript">
+			$(document).ready(function(){
+
+				$('#ninja').sortable();
+				$( '#ninja' ).disableSelection();
+				$('#content img').click(function(){
+					var flip = $(this).attr('src');
+					$(this).attr('src', $(this).attr('alt-src'));
+					$(this).attr('alt-src', flip);
+				});
+
+			});
+		</script>
+	</head>
+	<body>
+		<div id="container">
+			<div id="header">
+				<h4>Ninja to Cat!</h4>
+				<ul>
+					<li><a href="#"><img src="back.png" alt="Back Icon"></a></li>
+					<li><a href="#"><img src="cancel.png" alt="Cancel Icon"></a></li>
+					<li><a href="#"><img src="forward.png" alt="Forward Icon"></a></li>
+					<li><a href="#"><img src="home.png" alt="Home Icon"></a></li>
+				</ul>
+				<form>
+					<input type="url" name="URL" placeholder="http..."/>
+					<input type="search" name="Search" placeholder="Search"/>
+				</form>
+			</div>
+			<div id="content">
+				<ul id='ninja'>
+					<li><img src='ninja0.png' alt='Ninja Img' alt-src='cat0.png' /></li>
+					<li><img src='ninja1.png' alt='Ninja Img' alt-src='cat1.png' /></li>
+					<li><img src='ninja2.png' alt='Ninja Img' alt-src='cat2.png' /></li>
+					<li><img src='ninja3.png' alt='Ninja Img' alt-src='cat3.png' /></li>
+					<li><img src='ninja4.png' alt='Ninja Img' alt-src='cat4.png' /></li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>
