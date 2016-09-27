@@ -1,0 +1,13 @@
+Git Assignment IV:
+
+Git Init
+Git Add .
+Git commit -m "initial commit"
+Pushed to Github:
+(a) git remote add origin https://github.com/neko-pajama/basic_repo.git
+(b) git push origin master
+Added dummy file to local repo
+Git add .
+Git commit -m "added text file"
+Pushed to Github again: git push origin master
+confirmed changes by visiting Github.
